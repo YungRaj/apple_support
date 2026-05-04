@@ -2275,6 +2275,8 @@ please file an issue at https://github.com/bazelbuild/apple_support/issues/new
         feature(name = "opt"),
         feature(name = "parse_headers"),
         feature(name = "no_dotd_file"),
+        feature(name = "sanitize_pwd", enabled = True),
+        feature(name = "set_soname", enabled = True),
 
         # Features with more configuration
         strip_args_feature,
@@ -2371,7 +2373,6 @@ please file an issue at https://github.com/bazelbuild/apple_support/issues/new
     tool_paths = {
         "ar": ctx.file.libtool.path,
         "cpp": "/usr/bin/cpp",
-        "dwp": "/usr/bin/dwp",
         "gcc": ctx.file.cc_wrapper.path,
         "gcov": "/usr/bin/gcov",
         "ld": "/usr/bin/ld",
